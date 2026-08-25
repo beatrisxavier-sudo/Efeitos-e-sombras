@@ -3,26 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed de Postagens</title>
+  <title>Feed Interativo de Postagens</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Ícones do Lucide Icons para visual moderno -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <header>
-    <h1>Meu Feed</h1>
-    <button id="toggle-theme">Alternar Modo</button>
-  </header>
+  <div class="app-container">
+    <header class="main-header">
+      <div class="header-content">
+        <h1>DevFeed<span class="dot">.</span></h1>
+        <button id="toggle-theme" class="theme-btn" aria-label="Alternar Tema">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+      </div>
+      
+      <!-- Filtro rápido por tags -->
+      <div class="tag-filters">
+        <button class="filter-btn active" data-tag="all">Todos</button>
+        <button class="filter-btn" data-tag="frontend">Frontend</button>
+        <button class="filter-btn" data-tag="css">CSS3</button>
+        <button class="filter-btn" data-tag="js">JavaScript</button>
+      </div>
+    </header>
 
-  <main class="posts-container">
-    <article class="card">
-      <h2>Título da Postagem 1</h2>
-      <p>Este é o conteúdo do primeiro card. Passe o mouse sobre ele para ver a animação e o efeito de profundidade.</p>
-    </article>
+    <main class="posts-container">
+      <!-- Card 1 -->
+      <article class="card" data-tag="css">
+        <div class="card-tag">CSS3</div>
+        <h2>Dominando Efeitos de Hover e Transições</h2>
+        <p>Aprenda como utilizar `transform: scale()`, elevação com `box-shadow` e variáveis CSS para construir interfaces dinâmicas e fluidas.</p>
+        
+        <div class="card-footer">
+          <div class="author-info">
+            <span class="author-name">Ana Silva</span>
+            <span class="post-date">Há 2 horas</span>
+          </div>
+          <button class="like-btn" data-likes="42">
+            <i data-lucide="heart" class="heart-icon"></i>
+            <span class="like-count">42</span>
+          </button>
+        </div>
+      </article>
 
-    <article class="card">
-      <h2>Título da Postagem 2</h2>
-      <p>Outro exemplo de card com transição suave, alteração de escala e sombra personalizada.</p>
-    </article>
-  </main>
+      <!-- Card 2 -->
+      <article class="card" data-tag="js">
+        <div class="card-tag">JavaScript</div>
+        <h2>Criando Componentes Interativos</h2>
+        <p>Descubra como manipular o DOM de forma eficiente, persistir preferências com `localStorage` e aplicar animações em respostas de clique.</p>
+        
+        <div class="card-footer">
+          <div class="author-info">
+            <span class="author-name">Carlos Oliveira</span>
+            <span class="post-date">Há 5 horas</span>
+          </div>
+          <button class="like-btn" data-likes="128">
+            <i data-lucide="heart" class="heart-icon"></i>
+            <span class="like-count">128</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-tag="frontend">
+        <div class="card-tag">Frontend</div>
+        <h2>Boas Práticas de UI/UX no Modo Escuro</h2>
+        <p>Ajustar contrastes e adaptar a intensidade das sombras no tema escuro garante uma navegação confortável para o usuário em qualquer ambiente.</p>
+        
+        <div class="card-footer">
+          <div class="author-info">
+            <span class="author-name">Beatriz Lima</span>
+            <span class="post-date">Ontem</span>
+          </div>
+          <button class="like-btn" data-likes="89">
+            <i data-lucide="heart" class="heart-icon"></i>
+            <span class="like-count">89</span>
+          </button>
+        </div>
+      </article>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
