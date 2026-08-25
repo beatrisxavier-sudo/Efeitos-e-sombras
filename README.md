@@ -1,23 +1,40 @@
-# 🚀 Cards Interativos com Hover e Modo Escuro
+# 🚀 DevFeed — Cartões Interativos com Hover, Modo Escuro e Sistema de Curtidas
 
-Este projeto apresenta um layout de feed flexível com cartões de postagem interativos (`<article>`), utilizando transições CSS, `:hover` e suporte a tema escuro.
+Uma interface moderna de feed de postagens desenvolvida com **HTML5**, **CSS3 Avançado** e **JavaScript ES6+**. O projeto conta com efeitos de elevação em `:hover`, suporte completo ao modo escuro com persistência, sistema de curtidas animado e filtragem dinâmica de tópicos.
 
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5**: Estruturação semântica.
-- **CSS3**: Estilização, variáveis CSS, efeito de zoom (`scale`) e sombras dinâmicas.
-- **JavaScript**: Alternância entre Modo Claro e Modo Escuro.
+---
 
 ## 🎨 Funcionalidades
 
-- **Efeito Hover no Card**: Ao passar o ponteiro sobre qualquer cartão:
-  - O tamanho aumenta levemente (`transform: scale(1.02)`).
-  - A sombra (`box-shadow`) ganha maior profundidade e intensidade.
-- **Modo Escuro**:
-  - Ajuste de cores da página e dos cartões.
-  - Sombra personalizada em tom azul brilhante no `:hover` para manter o destaque em fundos escuros.
+- **Efeito Hover Premium (`:hover`)**:
+  - Ampliação leve com `transform: translateY(-6px) scale(1.02)`.
+  - Transição de bordas e sombra com efeito de brilho suave (*glow*).
+- **Modo Escuro com Iluminação Neon**:
+  - Alternância de tema com ajuste de sombras para tom de azul brilhante/neon.
+  - Salva a preferência do usuário no `localStorage`.
+- **Sistema de Curtidas Interativo**:
+  - Botões de curtir independentes por cartão.
+  - Animação no estilo *Heartbeat* (pulso) ao curtir/descurtir.
+  - Incremento e decremento dinâmico do contador.
+- **Filtragem por Tags**:
+  - Filtro em tempo real de cards por categorias (`Frontend`, `CSS3`, `JavaScript`).
 
-## 📂 Como Executar
+---
 
-1. Clone o repositório ou baixe os arquivos.
-2. Abra o arquivo `index.html` em qualquer navegador.
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5**: Estrutura semântica (`<header>`, `<main>`, `<article>`).
+- **CSS3**:
+  - Variáveis CSS (`:root` e `body.dark-mode`).
+  - Keyframes e animação `@keyframes heartbeat`.
+  - Propriedades de elevação `box-shadow` e `transform`.
+- **JavaScript (Vanilla)**: Manipulação DOM, eventos de clique e `localStorage`.
+- **Lucide Icons**: Biblioteca de ícones vetoriais leves.
+
+---
+
+## 📂 Como Executar O Projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/seu-usuario/devfeed-interativo.git](https://github.com/seu-usuario/devfeed-interativo.git)
