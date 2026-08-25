@@ -1,0 +1,77 @@
+/* Variáveis para controle de temas */
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: rgba(0, 0, 0, 0.25);
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  --bg-color: #121214;
+  --text-color: #e1e1e6;
+  --card-bg: #202024;
+  /* Sombra em tom de azul brilhante suave para o modo escuro */
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --card-shadow-hover: rgba(0, 168, 255, 0.4); 
+}
+
+/* Estilos Gerais */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #00875f;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #00b37e;
+}
+
+/* Layout dos Cards */
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilização do Article/Card */
+article.card {
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  
+  /* Transição suave para o efeito :hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de :hover conforme o desafio */
+article.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px var(--card-shadow-hover);
+}
